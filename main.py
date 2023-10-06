@@ -1,19 +1,6 @@
 phone_book = {}
 
 
-def main():  # Основной модуль
-    while True:
-        user_input = input("Please enter your command: ")
-        result = parcer(user_input)
-        print(result)
-        if result == "Good bye!":
-            break
-
-
-if __name__ == "__main__":
-    main()
-
-
 def input_error(func):  # Декоратор ошибок
     def inner_func(text):
         try:
@@ -83,5 +70,14 @@ def get_phone_book():  # Вывод всей телефонной книги
     return result
 
 
+def main():  # Основной модуль
+    while True:
+        user_input = input("Please enter your command: ")
+        result = parcer(user_input)
+        print(result)
+        if result == "Good bye!":
+            break
+
+
 if __name__ == "__main__":
-    main.run(debug=False, host="0.0.0.0")
+    main()
